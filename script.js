@@ -1,3 +1,5 @@
+import config from "./config.js";
+console.log(config.APIkey);
 const timer_text = document.querySelector(".timer-text");
 const image_wrapper = document.querySelector(".image-wrapper");
 const image = document.querySelector(".image");
@@ -6,10 +8,8 @@ const bio = document.querySelectorAll(".bio");
 
 // learning about APIs and how to work with them in JS.
 // fetch function returns a promise. Use await.
-//  CONFIDENTIAL
-const key = "live_jWrMxBJxHDe0v1PP8ogXokId6Y7JJDT0FgRAh0a3CDsxi633Ff27TRgB2FIu0HID";
 
-const url = `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${key}`;
+const url = `https://api.thecatapi.com/v1/images/search?has_breeds=1&api_key=${config.APIkey}`;
 
 // Using async to use await for the calls.
 // then can be used instead of await.
